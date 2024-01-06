@@ -7,10 +7,20 @@ import EthereumLogo from '../../assets/images/ethereum-logo.png'
 import AvaxLogo from '../../assets/svg/avax_logo.svg'
 import BnbLogo from '../../assets/svg/bnb-logo.svg'
 import CeloLogo from '../../assets/svg/celo_logo.svg'
+import ClassicLogo from '../../assets/svg/etc-logo.svg'
 import MaticLogo from '../../assets/svg/matic-token-icon.svg'
-import { isCelo, NATIVE_CHAIN_ID, nativeOnChain } from '../../constants/tokens'
+import { isCelo, isClassic, NATIVE_CHAIN_ID, nativeOnChain } from '../../constants/tokens'
 
-type Network = 'ethereum' | 'arbitrum' | 'optimism' | 'polygon' | 'smartchain' | 'celo' | 'avalanchec' | 'base'
+type Network =
+  | 'ethereum'
+  | 'arbitrum'
+  | 'optimism'
+  | 'polygon'
+  | 'smartchain'
+  | 'celo'
+  | 'avalanchec'
+  | 'base'
+  | 'classic'
 
 export function chainIdToNetworkName(networkId: ChainId): Network {
   switch (networkId) {
@@ -26,6 +36,8 @@ export function chainIdToNetworkName(networkId: ChainId): Network {
       return 'smartchain'
     case ChainId.CELO:
       return 'celo'
+    case ChainId.CLASSIC:
+      return 'classic'
     case ChainId.AVALANCHE:
       return 'avalanchec'
     case ChainId.BASE:
@@ -45,6 +57,9 @@ export function getNativeLogoURI(chainId: ChainId = ChainId.MAINNET): string {
     case ChainId.CELO:
     case ChainId.CELO_ALFAJORES:
       return CeloLogo
+    case ChainId.CLASSIC:
+    case ChainId.CLASSIC_MORDOR:
+      return ClassicLogo
     case ChainId.AVALANCHE:
       return AvaxLogo
     default:
@@ -66,8 +81,12 @@ function getTokenLogoURI(address: string, chainId: ChainId = ChainId.MAINNET): s
     return CeloLogo
   }
 
+  if (isClassic(chainId) && address === nativeOnChain(chainId).wrapped.address) {
+    return ClassicLogo
+  }
+
   if (networksWithUrls.includes(chainId)) {
-    return `https://raw.githubusercontent.com/Uniswap/assets/master/blockchains/${networkName}/assets/${address}/logo.png`
+    return `https://raw.githubusercontent.com/etcswap/token-assets/master/blockchains/${networkName}/assets/${address}/logo.png`
   }
 }
 

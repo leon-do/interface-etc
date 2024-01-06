@@ -88,6 +88,23 @@ export const FALLBACK_URLS = {
     // "Safe" URLs
     `https://forno.celo.org`,
   ],
+  [ChainId.CLASSIC]: [
+    // "Safe" URLs
+    `https://etc.rivet.link`,
+    // "Fallback" URLs
+    `https://besu-at.etc-network.info`,
+    `https://besu-de.etc-network.info`,
+    `https://geth-at.etc-network.info`,
+    `https://geth-de.etc-network.info`,
+    `https://etc.mytokenpocket.vip`,
+    `https://etc.etcdesktop.com`,
+  ],
+  [ChainId.CLASSIC_MORDOR]: [
+    // "Safe" URLs
+    `https://rpc.mordor.etccooperative.org`,
+    // "Fallback" URLs
+    `https://geth-mordor.etc-network.info`,
+  ],
   [ChainId.CELO_ALFAJORES]: [
     // "Safe" URLs
     `https://alfajores-forno.celo-testnet.org`,
@@ -153,6 +170,8 @@ export const RPC_URLS = {
   ],
   [ChainId.CELO]: FALLBACK_URLS[ChainId.CELO],
   [ChainId.CELO_ALFAJORES]: FALLBACK_URLS[ChainId.CELO_ALFAJORES],
+  [ChainId.CLASSIC]: FALLBACK_URLS[ChainId.CLASSIC],
+  [ChainId.CLASSIC_MORDOR]: FALLBACK_URLS[ChainId.CLASSIC_MORDOR],
   [ChainId.BNB]: [QUICKNODE_BNB_RPC_URL, ...FALLBACK_URLS[ChainId.BNB]],
   [ChainId.AVALANCHE]: [`https://avalanche-mainnet.infura.io/v3/${INFURA_KEY}`, ...FALLBACK_URLS[ChainId.AVALANCHE]],
   [ChainId.BASE]: [`https://base-mainnet.infura.io/v3/${INFURA_KEY}`, ...FALLBACK_URLS[ChainId.BASE]],

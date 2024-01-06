@@ -3,6 +3,8 @@ import invariant from 'tiny-invariant'
 
 export const NATIVE_CHAIN_ID = 'NATIVE'
 
+export const ETC_INIT_CODE_HASH = '0x2b415f82360ce2e6f344b508b8a5bb70898045911e527fd24d56056e0a97dd54'
+
 // When decimals are not specified for an ERC20 token
 // use default ERC20 token decimals as specified here:
 // https://docs.openzeppelin.com/contracts/3.x/erc20
@@ -398,6 +400,28 @@ class BscNativeCurrency extends NativeCurrency {
   }
 }
 
+export function isClassic(chainId: number): chainId is ChainId.CLASSIC | ChainId.CLASSIC_MORDOR {
+  return chainId === ChainId.CLASSIC || chainId === ChainId.CLASSIC_MORDOR
+}
+
+class EtcNativeCurrency extends NativeCurrency {
+  equals(other: Currency): boolean {
+    return other.isNative && other.chainId === this.chainId
+  }
+
+  get wrapped(): Token {
+    if (!isClassic(this.chainId)) throw new Error('Not etc')
+    const wrapped = WRAPPED_NATIVE_CURRENCY[this.chainId]
+    invariant(wrapped instanceof Token)
+    return wrapped
+  }
+
+  public constructor(chainId: number) {
+    if (!isClassic(chainId)) throw new Error('Not etc')
+    super(chainId, 18, 'ETC', 'Ether')
+  }
+}
+
 export function isAvalanche(chainId: number): chainId is ChainId.AVALANCHE {
   return chainId === ChainId.AVALANCHE
 }
@@ -442,6 +466,8 @@ export function nativeOnChain(chainId: number): NativeCurrency | Token {
     nativeCurrency = new PolygonNativeCurrency(chainId)
   } else if (isCelo(chainId)) {
     nativeCurrency = getCeloNativeCurrency(chainId)
+  } else if (isClassic(chainId)) {
+    nativeCurrency = new EtcNativeCurrency(chainId)
   } else if (isBsc(chainId)) {
     nativeCurrency = new BscNativeCurrency(chainId)
   } else if (isAvalanche(chainId)) {

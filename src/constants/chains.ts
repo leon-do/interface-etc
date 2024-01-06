@@ -8,6 +8,8 @@ export const CHAIN_IDS_TO_NAMES = {
   [ChainId.POLYGON_MUMBAI]: 'polygon_mumbai',
   [ChainId.CELO]: 'celo',
   [ChainId.CELO_ALFAJORES]: 'celo_alfajores',
+  [ChainId.CLASSIC]: 'classic',
+  [ChainId.CLASSIC_MORDOR]: 'classic_mordor',
   [ChainId.ARBITRUM_ONE]: 'arbitrum',
   [ChainId.ARBITRUM_GOERLI]: 'arbitrum_goerli',
   [ChainId.OPTIMISM]: 'optimism',
@@ -48,6 +50,7 @@ export const SUPPORTED_GAS_ESTIMATE_CHAIN_IDS = [
   ChainId.MAINNET,
   ChainId.POLYGON,
   ChainId.CELO,
+  ChainId.CLASSIC,
   ChainId.OPTIMISM,
   ChainId.ARBITRUM_ONE,
   ChainId.BNB,
@@ -58,7 +61,12 @@ export const SUPPORTED_GAS_ESTIMATE_CHAIN_IDS = [
 /**
  * Supported networks for V2 pool behavior.
  */
-export const SUPPORTED_V2POOL_CHAIN_IDS = [ChainId.MAINNET, ChainId.GOERLI] as const
+export const SUPPORTED_V2POOL_CHAIN_IDS = [
+  ChainId.MAINNET,
+  ChainId.GOERLI,
+  ChainId.CLASSIC,
+  ChainId.CLASSIC_MORDOR,
+] as const
 
 export const TESTNET_CHAIN_IDS = [
   ChainId.GOERLI,
@@ -67,6 +75,7 @@ export const TESTNET_CHAIN_IDS = [
   ChainId.ARBITRUM_GOERLI,
   ChainId.OPTIMISM_GOERLI,
   ChainId.CELO_ALFAJORES,
+  ChainId.CLASSIC_MORDOR,
 ] as const
 
 /**
@@ -80,6 +89,8 @@ export const L1_CHAIN_IDS = [
   ChainId.POLYGON_MUMBAI,
   ChainId.CELO,
   ChainId.CELO_ALFAJORES,
+  ChainId.CLASSIC,
+  ChainId.CLASSIC_MORDOR,
   ChainId.BNB,
   ChainId.AVALANCHE,
 ] as const
@@ -107,33 +118,36 @@ export type SupportedL2ChainId = (typeof L2_CHAIN_IDS)[number]
  */
 export function getChainPriority(chainId: ChainId): number {
   switch (chainId) {
+    case ChainId.CLASSIC:
+    case ChainId.CLASSIC_MORDOR:
+      return 0
     case ChainId.MAINNET:
     case ChainId.GOERLI:
     case ChainId.SEPOLIA:
-      return 0
+      return 1
     case ChainId.ARBITRUM_ONE:
     case ChainId.ARBITRUM_GOERLI:
-      return 1
-    case ChainId.OPTIMISM:
-    case ChainId.OPTIMISM_GOERLI:
       return 2
-    case ChainId.POLYGON:
-    case ChainId.POLYGON_MUMBAI:
+    case ChainId.AVALANCHE:
       return 3
     case ChainId.BASE:
       return 4
     case ChainId.BNB:
       return 5
-    case ChainId.AVALANCHE:
-      return 6
     case ChainId.CELO:
     case ChainId.CELO_ALFAJORES:
+      return 6
+    case ChainId.OPTIMISM:
+    case ChainId.OPTIMISM_GOERLI:
       return 7
-    default:
+    case ChainId.POLYGON:
+    case ChainId.POLYGON_MUMBAI:
       return 8
+    default:
+      return 9
   }
 }
 
 export function isUniswapXSupportedChain(chainId: number) {
-  return chainId === ChainId.MAINNET
+  return chainId === ChainId.CLASSIC
 }

@@ -6,7 +6,7 @@ import { MetaMask } from '@web3-react/metamask'
 import { Network } from '@web3-react/network'
 import { Actions, Connector } from '@web3-react/types'
 import GNOSIS_ICON from 'assets/images/gnosis.png'
-import UNISWAP_LOGO from 'assets/svg/logo.svg'
+import ETCSWAP_LOGO from 'assets/svg/etcswap-app-logo.svg'
 import COINBASE_ICON from 'assets/wallets/coinbase-icon.svg'
 import UNIWALLET_ICON from 'assets/wallets/uniswap-wallet-icon.png'
 import WALLET_CONNECT_ICON from 'assets/wallets/walletconnect-icon.svg'
@@ -159,8 +159,8 @@ const [web3CoinbaseWallet, web3CoinbaseWalletHooks] = initializeConnector<Coinba
       actions,
       options: {
         url: RPC_URLS[ChainId.MAINNET][0],
-        appName: 'Uniswap',
-        appLogoUrl: UNISWAP_LOGO,
+        appName: 'ETCswap',
+        appLogoUrl: ETCSWAP_LOGO,
         reloadOnDisconnect: false,
       },
       onError,
@@ -177,7 +177,7 @@ const coinbaseWalletConnection: Connection = {
   // If on a mobile browser that isn't the coinbase wallet browser, deeplink to the coinbase wallet app
   overrideActivate: () => {
     if (isMobile && !getIsInjectedMobileBrowser()) {
-      window.open('https://go.cb-w.com/mtUDhEZPy1', 'cbwallet')
+      window.open('https://www.coinbase.com/wallet', 'cbwallet')
       return true
     }
     return false
@@ -185,11 +185,11 @@ const coinbaseWalletConnection: Connection = {
 }
 
 export const connections = [
+  coinbaseWalletConnection,
+  injectedConnection,
   gnosisSafeConnection,
   uniwalletWCV2ConnectConnection,
-  injectedConnection,
   walletConnectV2Connection,
-  coinbaseWalletConnection,
   networkConnection,
   deprecatedNetworkConnection,
 ]
