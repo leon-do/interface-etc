@@ -6280,14 +6280,13 @@
     "@uniswap/v3-core" "git+https://github.com/etcswap/v3-core.git#etcswap"
     base64-sol "1.0.1"
 
-"@uniswap/v3-sdk@^3.10.0":
+"@uniswap/v3-sdk@^3.10.0", "@uniswap/v3-sdk@git+https://github.com/etcswap/v3-sdk.git#etcswap":
   version "3.10.0"
-  resolved "https://registry.yarnpkg.com/@uniswap/v3-sdk/-/v3-sdk-3.10.0.tgz#962c9e598250ced00702d944783c2d9ee3fa12f6"
-  integrity sha512-sbmSA1O+Ct960r66Ie/c1rOmVadpwRu8nQ79pGICv0pZJdnFIQ/SReG3F+iC2C2UNNjNP6aC2WDUggXrjyrgnA==
+  resolved "git+https://github.com/etcswap/v3-sdk.git#34d6b4c1559a38d54b07840bdab93454eee357d9"
   dependencies:
     "@ethersproject/abi" "^5.0.12"
     "@ethersproject/solidity" "^5.0.9"
-    "@uniswap/sdk-core" "^4"
+    "@uniswap/sdk-core" "git+https://github.com/etcswap/sdk-core.git#etcswap"
     "@uniswap/swap-router-contracts" "^1.2.1"
     "@uniswap/v3-periphery" "^1.1.1"
     "@uniswap/v3-staker" "1.0.0"
