@@ -6133,8 +6133,9 @@
     tiny-invariant "^1.1.0"
     toformat "^2.0.0"
 
-"@uniswap/smart-order-router@file:../smart-order-router":
+"@uniswap/smart-order-router@git+https://github.com/etcswap/smart-order-router.git#etcswap":
   version "3.15.0"
+  resolved "git+https://github.com/etcswap/smart-order-router.git#64429a2ef3e126f83998872244d3a439bd3f0bcf"
   dependencies:
     "@uniswap/default-token-list" "^11.2.0"
     "@uniswap/permit2-sdk" "^1.2.0"
