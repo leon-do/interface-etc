@@ -3,8 +3,6 @@ import invariant from 'tiny-invariant'
 
 export const NATIVE_CHAIN_ID = 'NATIVE'
 
-export const ETC_INIT_CODE_HASH = '0x7ea2da342810af3c5a9b47258f990aaac829fe1385a1398feb77d0126a85dbef'
-
 // When decimals are not specified for an ERC20 token
 // use default ERC20 token decimals as specified here:
 // https://docs.openzeppelin.com/contracts/3.x/erc20
