@@ -65,7 +65,7 @@ describe('Permit2', () => {
       cy.window().trigger('blur')
 
       // Verify token approval
-      cy.contains('Enable spending DAI on Uniswap')
+      cy.contains('Enable spending DAI on ETCswap')
       cy.wait('@eth_sendRawTransaction')
       cy.hardhat().then((hardhat) => hardhat.mine())
       cy.get(getTestSelector('popups')).contains('Approved')
@@ -91,7 +91,7 @@ describe('Permit2', () => {
       initiateSwap()
 
       // Verify token approval
-      cy.contains('Enable spending DAI on Uniswap')
+      cy.contains('Enable spending DAI on ETCswap')
       cy.wait('@eth_sendRawTransaction')
       cy.hardhat().then((hardhat) => hardhat.mine())
       cy.get(getTestSelector('popups')).contains('Approved')
@@ -134,7 +134,7 @@ describe('Permit2', () => {
         .should('deep.equal', BigNumber.from(0))
 
       // Verify token approval
-      cy.contains('Enable spending USDT on Uniswap')
+      cy.contains('Enable spending USDT on ETCswap')
       cy.wait('@eth_sendRawTransaction')
       cy.hardhat().then((hardhat) => hardhat.mine())
       cy.get(getTestSelector('popups')).contains('Approved')
