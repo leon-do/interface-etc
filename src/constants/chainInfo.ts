@@ -70,6 +70,7 @@ type ChainInfoMap = { readonly [chainId: number]: L1ChainInfo | L2ChainInfo } & 
 const CHAIN_INFO: ChainInfoMap = {
   [ChainId.MAINNET]: {
     networkType: NetworkType.L1,
+    blockWaitMsBeforeWarning: ms(`10m`),
     docs: 'https://docs.uniswap.org/',
     explorer: 'https://etherscan.io/',
     infoLink: 'https://info.uniswap.org/#/',
@@ -80,6 +81,7 @@ const CHAIN_INFO: ChainInfoMap = {
   },
   [ChainId.GOERLI]: {
     networkType: NetworkType.L1,
+    blockWaitMsBeforeWarning: ms(`10m`),
     docs: 'https://docs.uniswap.org/',
     explorer: 'https://goerli.etherscan.io/',
     infoLink: 'https://info.uniswap.org/#/',
@@ -90,6 +92,7 @@ const CHAIN_INFO: ChainInfoMap = {
   },
   [ChainId.SEPOLIA]: {
     networkType: NetworkType.L1,
+    blockWaitMsBeforeWarning: ms(`10m`),
     docs: 'https://docs.uniswap.org/',
     explorer: 'https://sepolia.etherscan.io/',
     infoLink: 'https://info.uniswap.org/#/',
@@ -145,10 +148,10 @@ const CHAIN_INFO: ChainInfoMap = {
     docs: 'https://offchainlabs.com/',
     explorer: 'https://goerli.arbiscan.io/',
     infoLink: 'https://info.uniswap.org/#/arbitrum/',
-    label: 'Arbitrum Goerli',
+    label: 'Arbitrum Görli',
     defaultListUrl: ARBITRUM_LIST, // TODO: use arbitrum goerli token list
     helpCenterUrl: 'https://help.uniswap.org/en/collections/3137787-uniswap-on-arbitrum',
-    nativeCurrency: { name: 'Goerli Arbitrum Ether', symbol: 'goerliArbETH', decimals: 18 },
+    nativeCurrency: { name: 'Arbitrum Görli Ether', symbol: 'ArbGörETH', decimals: 18 },
     color: darkTheme.chain_421613,
     backgroundColor: darkTheme.chain_421613_background,
   },
