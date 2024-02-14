@@ -6124,7 +6124,7 @@
 
 "@uniswap/sdk-core@>= 3", "@uniswap/sdk-core@^4.0.2", "@uniswap/sdk-core@^4.0.3", "@uniswap/sdk-core@git+https://github.com/etcswap/sdk-core.git#etcswap":
   version "4.0.10"
-  resolved "git+https://github.com/etcswap/sdk-core.git#75705f70da95a13c10ddf70022e5ebcd8b6b4c6c"
+  resolved "git+https://github.com/etcswap/sdk-core.git#c95d7c681c93b52b0419af9f2f243a7946048c12"
   dependencies:
     "@ethersproject/address" "^5.0.2"
     big.js "^5.2.2"
@@ -6135,7 +6135,7 @@
 
 "@uniswap/smart-order-router@git+https://github.com/etcswap/smart-order-router.git#etcswap":
   version "3.15.0"
-  resolved "git+https://github.com/etcswap/smart-order-router.git#64429a2ef3e126f83998872244d3a439bd3f0bcf"
+  resolved "git+https://github.com/etcswap/smart-order-router.git#14b6b034c5242572e9262a1d45dd362c654b1303"
   dependencies:
     "@uniswap/default-token-list" "^11.2.0"
     "@uniswap/permit2-sdk" "^1.2.0"
@@ -6200,7 +6200,7 @@
 
 "@uniswap/universal-router-sdk@^1.5.4", "@uniswap/universal-router-sdk@git+https://github.com/etcswap/universal-router-sdk.git#etcswap":
   version "2.0.1"
-  resolved "git+https://github.com/etcswap/universal-router-sdk.git#f14fdfea7a9f2eeb1d12bb2b8194e20bf6d2af15"
+  resolved "git+https://github.com/etcswap/universal-router-sdk.git#20a004cd6912f0e10816fb1d8aa04a27069195a8"
   dependencies:
     "@uniswap/permit2-sdk" "^1.2.0"
     "@uniswap/router-sdk" "git+https://github.com/etcswap/router-sdk.git#etcswap"
