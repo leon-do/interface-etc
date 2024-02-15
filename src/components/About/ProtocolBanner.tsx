@@ -8,7 +8,6 @@ import meshSrc from './images/Mesh.png'
 const DARK_MODE_GRADIENT = 'radial-gradient(101.8% 4091.31% at 0% 0%, #006633 0%, #00cc66 100%)'
 
 const Banner = styled.div<{ isDarkMode: boolean }>`
-  height: 340px;
   width: 100%;
   border-radius: 32px;
   max-width: 1440px;
@@ -28,7 +27,6 @@ const Banner = styled.div<{ isDarkMode: boolean }>`
       : `url(${meshSrc}), linear-gradient(93.06deg, #00cc66 2.66%, #33ff99 98.99%);`};
 
   @media screen and (min-width: ${BREAKPOINTS.lg}px) {
-    height: 140px;
     flex-direction: row;
   }
 `
