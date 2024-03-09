@@ -236,4 +236,5 @@ export const OrderStatusTable: { [key in SwapOrderStatus]: UniswapXOrderStatus }
   [SwapOrderStatus.Error]: UniswapXOrderStatus.ERROR,
   [SwapOrderStatus.InsufficientFunds]: UniswapXOrderStatus.INSUFFICIENT_FUNDS,
   [SwapOrderStatus.Filled]: UniswapXOrderStatus.FILLED,
+  [SwapOrderStatus.Cancelled]: UniswapXOrderStatus.CANCELLED,
 }
