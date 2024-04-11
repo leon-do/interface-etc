@@ -2728,7 +2728,7 @@ exports[`SwapLineItem.tsx exact input 1`] = `
             <div
               class="css-142zc9n"
             >
-              Uniswap Client
+              ETCswap Client
             </div>
           </div>
         </div>
@@ -6070,7 +6070,7 @@ exports[`SwapLineItem.tsx exact output 1`] = `
             <div
               class="css-142zc9n"
             >
-              Uniswap Client
+              ETCswap Client
             </div>
           </div>
         </div>

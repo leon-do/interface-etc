@@ -16,7 +16,7 @@ describe('RouterLabel', () => {
 
   it('renders correct label for classic trade with client routing', () => {
     render(<RouterLabel trade={TEST_TRADE_EXACT_INPUT} />)
-    expect(screen.getByText('Uniswap Client')).toBeInTheDocument()
+    expect(screen.getByText('ETCswap Client')).toBeInTheDocument()
   })
 
   it('renders correct label for classic trade with API routing', () => {
