@@ -7,7 +7,7 @@ import { useCachedPortfolioBalancesQuery } from 'components/PrefetchBalancesWrap
 import TokenSafetyIcon from 'components/TokenSafety/TokenSafetyIcon'
 import { checkWarning } from 'constants/tokenSafety'
 import { TokenBalances } from 'lib/hooks/useTokenList/sorting'
-import tryParseCurrencyAmount from 'lib/utils/tryParseCurrencyAmount'
+// import tryParseCurrencyAmount from 'lib/utils/tryParseCurrencyAmount'
 import { CSSProperties, MutableRefObject, useCallback, useMemo } from 'react'
 import { FixedSizeList } from 'react-window'
 import { Text } from 'rebass'
@@ -16,6 +16,7 @@ import { ThemedText } from 'theme/components'
 import { NumberType, useFormatter } from 'utils/formatNumbers'
 
 import { useIsUserAddedToken } from '../../../hooks/Tokens'
+import { useCurrencyBalance } from '../../../state/connection/hooks'
 import { TokenFromList } from '../../../state/lists/tokenFromList'
 import Column, { AutoColumn } from '../../Column'
 import CurrencyLogo from '../../Logo/CurrencyLogo'
@@ -243,6 +244,7 @@ export default function CurrencyList({
   isAddressSearch: string | false
   balances: TokenBalances
 }) {
+  const { account } = useWeb3React()
   const itemData: Currency[] = useMemo(() => {
     if (otherListTokens && otherListTokens?.length > 0) {
       return [...currencies, ...otherListTokens]
@@ -257,10 +259,13 @@ export default function CurrencyList({
       const currency = row
 
       const balance =
-        tryParseCurrencyAmount(
-          String(balances[currency.isNative ? 'ETH' : currency.address?.toLowerCase()]?.balance ?? 0),
-          currency
-        ) ?? CurrencyAmount.fromRawAmount(currency, 0)
+        useCurrencyBalance(account ?? undefined, currency ?? undefined) || CurrencyAmount.fromRawAmount(currency, 0)
+
+      // const balance =
+      //   tryParseCurrencyAmount(
+      //     String(balances[currency.isNative ? 'ETH' : currency.address?.toLowerCase()]?.balance ?? 0),
+      //     currency
+      //   ) ?? CurrencyAmount.fromRawAmount(currency, 0)
 
       const isSelected = Boolean(currency && selectedCurrency && selectedCurrency.equals(currency))
       const otherSelected = Boolean(currency && otherCurrency && otherCurrency.equals(currency))
@@ -295,7 +300,8 @@ export default function CurrencyList({
       showCurrencyAmount,
       searchQuery,
       isAddressSearch,
-      balances,
+      // balances,
+      account,
     ]
   )
 
