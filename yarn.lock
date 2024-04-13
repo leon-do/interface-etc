@@ -6135,7 +6135,7 @@
 
 "@uniswap/smart-order-router@git+https://github.com/etcswap/smart-order-router.git#etcswap":
   version "3.15.0"
-  resolved "git+https://github.com/etcswap/smart-order-router.git#5e318adcc30fcf401f448f456b60ce562f298908"
+  resolved "git+https://github.com/etcswap/smart-order-router.git#f35146e177b2f3e39a1a8c7eaa119dd56b1c14ff"
   dependencies:
     "@uniswap/default-token-list" "^11.2.0"
     "@uniswap/permit2-sdk" "^1.2.0"
