@@ -6135,7 +6135,7 @@
 
 "@uniswap/smart-order-router@git+https://github.com/etcswap/smart-order-router.git#etcswap":
   version "3.15.0"
-  resolved "git+https://github.com/etcswap/smart-order-router.git#f35146e177b2f3e39a1a8c7eaa119dd56b1c14ff"
+  resolved "git+https://github.com/etcswap/smart-order-router.git#eed502c3c90d315ff699d3ccac9abadb8d543c6e"
   dependencies:
     "@uniswap/default-token-list" "^11.2.0"
     "@uniswap/permit2-sdk" "^1.2.0"
@@ -6200,7 +6200,7 @@
 
 "@uniswap/universal-router-sdk@^1.5.4", "@uniswap/universal-router-sdk@git+https://github.com/etcswap/universal-router-sdk.git#etcswap":
   version "2.0.1"
-  resolved "git+https://github.com/etcswap/universal-router-sdk.git#20a004cd6912f0e10816fb1d8aa04a27069195a8"
+  resolved "git+https://github.com/etcswap/universal-router-sdk.git#e50ac7aa92ae651dfa462e769133e55dc547253a"
   dependencies:
     "@uniswap/permit2-sdk" "^1.2.0"
     "@uniswap/router-sdk" "git+https://github.com/etcswap/router-sdk.git#etcswap"
