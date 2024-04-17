@@ -146,12 +146,12 @@ export const MenuDropdown = () => {
             <Column gap="8">
               <Column paddingX="8" gap="4">
                 <Box display={{ sm: 'none', lg: 'flex', xxl: 'none' }}>
-                  <PrimaryMenuRow to="/pool" close={toggleOpen}>
+                  <PrimaryMenuRow to="/nfts" close={toggleOpen}>
                     <Icon>
                       <PoolIcon width={24} height={24} fill={theme.neutral1} />
                     </Icon>
                     <PrimaryMenuRow.Text>
-                      <Trans>Pool</Trans>
+                      <Trans>NFTs</Trans>
                     </PrimaryMenuRow.Text>
                   </PrimaryMenuRow>
                 </Box>

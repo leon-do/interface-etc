@@ -229,7 +229,6 @@ export default function CurrencyList({
   isLoading,
   searchQuery,
   isAddressSearch,
-  balances,
 }: {
   height: number
   currencies: Currency[]
