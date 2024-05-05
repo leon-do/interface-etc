@@ -13,7 +13,7 @@ import {
   DiscordIconMenu,
   EllipsisIcon,
   GithubIconMenu,
-  GovernanceIcon,
+  // GovernanceIcon,
   PoolIcon,
   TwitterIconMenu,
 } from 'nft/components/icons'
@@ -155,14 +155,16 @@ export const MenuDropdown = () => {
                     </PrimaryMenuRow.Text>
                   </PrimaryMenuRow>
                 </Box>
-                <PrimaryMenuRow to="/vote" close={toggleOpen}>
-                  <Icon>
-                    <GovernanceIcon width={24} height={24} color={theme.neutral1} />
-                  </Icon>
-                  <PrimaryMenuRow.Text>
-                    <Trans>Vote with ECO</Trans>
-                  </PrimaryMenuRow.Text>
-                </PrimaryMenuRow>
+                {
+                  //   <PrimaryMenuRow to="/vote" close={toggleOpen}>
+                  //   <Icon>
+                  //     <GovernanceIcon width={24} height={24} color={theme.neutral1} />
+                  //   </Icon>
+                  //   <PrimaryMenuRow.Text>
+                  //     <Trans>Vote with ECO</Trans>
+                  //   </PrimaryMenuRow.Text>
+                  // </PrimaryMenuRow>
+                }
                 <PrimaryMenuRow href="https://info.etcswap.org/#/">
                   <Icon>
                     <BarChartIcon width={24} height={24} color={theme.neutral1} />

@@ -4,11 +4,10 @@ import { useDisableNFTRoutes } from 'hooks/useDisableNFTRoutes'
 import styled from 'styled-components'
 import { BREAKPOINTS } from 'theme'
 import { ExternalLink, StyledRouterLink } from 'theme/components'
-import { useIsDarkMode } from 'theme/components/ThemeToggle'
 
 import { DiscordIcon, GithubIcon, TwitterIcon } from './Icons'
-import lightEcoImgSrc from './images/eco-logo.svg'
-import darkEcoImgSrc from './images/eco-logo.svg'
+// import lightEcoImgSrc from './images/eco-logo.svg'
+// import darkEcoImgSrc from './images/eco-logo.svg'
 
 const Footer = styled.div`
   display: flex;
@@ -44,15 +43,15 @@ const LogoSectionBottom = styled(LogoSection)`
   }
 `
 
-const StyledLogo = styled.img`
-  width: 72px;
-  height: 72px;
-  display: none;
+// const StyledLogo = styled.img`
+//   width: 72px;
+//   height: 72px;
+//   display: none;
 
-  @media screen and (min-width: ${BREAKPOINTS.lg}px) {
-    display: block;
-  }
-`
+//   @media screen and (min-width: ${BREAKPOINTS.lg}px) {
+//     display: block;
+//   }
+// `
 
 const SocialLinks = styled.div`
   display: flex;
@@ -112,10 +111,10 @@ const Copyright = styled.span`
 `
 
 const LogoSectionContent = () => {
-  const isDarkMode = useIsDarkMode()
+  // const isDarkMode = useIsDarkMode()
   return (
     <>
-      <StyledLogo src={isDarkMode ? darkEcoImgSrc : lightEcoImgSrc} alt="ETCswap Logo" />
+      {/* <StyledLogo src={isDarkMode ? darkEcoImgSrc : lightEcoImgSrc} alt="ETCswap Logo" /> */}
       <SocialLinks>
         <SocialLink href="https://ethereumclassic.org/discord" target="_blank" rel="noopener noreferrer">
           <DiscordIcon size={32} />
