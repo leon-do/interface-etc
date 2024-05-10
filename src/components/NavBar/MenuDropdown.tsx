@@ -220,12 +220,7 @@ export const MenuDropdown = () => {
                 <SecondaryLinkedText href="https://docs.etcswap.org/">
                   <Trans>Documentation</Trans> ↗
                 </SecondaryLinkedText>
-                <SecondaryLinkedText
-                  onClick={() => {
-                    toggleOpen()
-                    togglePrivacyPolicy()
-                  }}
-                >
+                <SecondaryLinkedText href="https://docs.etcswap.org/legal/overview">
                   <Trans>Legal & Privacy</Trans> ↗
                 </SecondaryLinkedText>
                 {(isDevelopmentEnv() || isStagingEnv()) && (
