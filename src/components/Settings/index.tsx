@@ -5,7 +5,7 @@ import { Scrim } from 'components/AccountDrawer'
 import AnimatedDropdown from 'components/AnimatedDropdown'
 import Column, { AutoColumn } from 'components/Column'
 import Row from 'components/Row'
-import { isSupportedChain, isUniswapXSupportedChain, L2_CHAIN_IDS } from 'constants/chains'
+import { isSupportedChain, L2_CHAIN_IDS } from 'constants/chains'
 import useDisableScrolling from 'hooks/useDisableScrolling'
 import { useOnClickOutside } from 'hooks/useOnClickOutside'
 import { Portal } from 'nft/components/common/Portal'
@@ -124,7 +124,7 @@ export default function SettingsTab({
   useOnClickOutside(node, isOpenDesktop ? closeMenu : undefined)
   useDisableScrolling(isOpen)
 
-  const uniswapXEnabled = chainId && isUniswapXSupportedChain(chainId)
+  const uniswapXEnabled = false // chainId && isUniswapXSupportedChain(chainId)
   const showRoutingSettings = Boolean(uniswapXEnabled && !hideRoutingSettings)
 
   const isChainSupported = isSupportedChain(chainId)
