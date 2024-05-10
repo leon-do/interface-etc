@@ -134,7 +134,7 @@ export const MenuDropdown = () => {
         </NavIcon>
 
         {isOpen && (
-          <NavDropdown top={{ sm: 'unset', lg: '56' }} bottom={{ sm: '50', lg: 'unset' }} right="0">
+          <NavDropdown top={{ sm: 'unset', lg: '56' }} bottom={{ sm: '50', lg: 'unset' }}>
             <Column gap="8">
               <Column paddingX="8" gap="4">
                 {/*
