@@ -133,8 +133,9 @@ const LogoSectionContent = () => {
         </SocialLink>
       </SocialLinks>
       <Copyright>
-        Made with 💚 by
-        <br />© {new Date().getFullYear()} EthereumClassic.com
+        Made with 💚<br />
+        by <a href="https://ethereumclassic.com" target="_blank">EthereumClassic.com</a><br />
+        © {new Date().getFullYear()} White B0x Inc. All Rights Reserved.
       </Copyright>
     </>
   )
