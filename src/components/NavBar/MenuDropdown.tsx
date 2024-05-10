@@ -1,7 +1,7 @@
 import { t, Trans } from '@lingui/macro'
 import { InterfaceElementName } from '@uniswap/analytics-events'
 import { ReactComponent as AppleLogo } from 'assets/svg/apple_logo.svg'
-import { ReactComponent as CoinbaseAppLogo } from 'assets/wallets/coinbase-icon.svg'
+import { ReactComponent as AppLogo } from 'assets/wallets/metamask-icon.svg'
 import FeatureFlagModal from 'components/FeatureFlagModal/FeatureFlagModal'
 import { PrivacyPolicyModal } from 'components/PrivacyPolicy'
 import { useAndroidGALaunchFlagEnabled } from 'featureFlags/flags/androidGALaunch'
@@ -174,11 +174,11 @@ export const MenuDropdown = () => {
                     {isAndroidGALaunched ? (
                       <>
                         <Icon>
-                          <CoinbaseAppLogo width="24px" height="24px" />
+                          <AppLogo width="24px" height="24px" />
                         </Icon>
                         <div>
                           <ThemedText.BodyPrimary>
-                            <Trans>Download Coinbase Wallet</Trans>
+                            <Trans>Download Metamask Wallet</Trans>
                           </ThemedText.BodyPrimary>
                           <ThemedText.LabelSmall>
                             <Trans>Available on iOS and Android</Trans>
