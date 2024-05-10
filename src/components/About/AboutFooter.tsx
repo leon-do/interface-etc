@@ -176,21 +176,6 @@ export const AboutFooter = () => {
             <ExternalTextLink href="https://ethereumclassic.org/news">Blog</ExternalTextLink>
           </TraceEvent>
         </LinkGroup>
-        <LinkGroup>
-          <LinkGroupTitle>Get Help</LinkGroupTitle>
-          <TraceEvent
-            events={[BrowserEvent.onClick]}
-            name={SharedEventName.ELEMENT_CLICKED}
-            element={InterfaceElementName.SUPPORT_LINK}
-          ></TraceEvent>
-          <TraceEvent
-            events={[BrowserEvent.onClick]}
-            name={SharedEventName.ELEMENT_CLICKED}
-            element={InterfaceElementName.SUPPORT_LINK}
-          >
-            <ExternalTextLink href="#">Help Center</ExternalTextLink>
-          </TraceEvent>
-        </LinkGroup>
       </FooterLinks>
 
       <LogoSectionBottom>
