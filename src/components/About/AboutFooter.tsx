@@ -158,6 +158,7 @@ export const AboutFooter = () => {
         </LinkGroup>
         <LinkGroup>
           <LinkGroupTitle>Protocol</LinkGroupTitle>
+          <ExternalTextLink href="https://classicusd.com">USC Stablecoin</ExternalTextLink>
           <ExternalTextLink href="https://twitter.com/EthClassicDAO">X / Twitter</ExternalTextLink>
           <ExternalTextLink href="https://discord.gg/2x6Dau6Bur">Discord</ExternalTextLink>
           <ExternalTextLink href="https://docs.etcswap.org">Documentation</ExternalTextLink>
