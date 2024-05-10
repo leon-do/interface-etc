@@ -135,9 +135,9 @@ const LogoSectionContent = () => {
       <Copyright>
         Made with 💚 by<br />
         EthereumClassic.com<br />
-        © {new Date().getFullYear()}<br />
         White B0x Inc.<br />
-        All Rights Reserved.
+        All Rights Reserved.<br />
+        © {new Date().getFullYear()}
       </Copyright>
     </>
   )
