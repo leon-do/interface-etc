@@ -1,7 +1,7 @@
 import { Trans } from '@lingui/macro'
 import { BrowserEvent, InterfaceElementName, InterfacePageName, SharedEventName } from '@uniswap/analytics-events'
 import { Trace, TraceEvent } from 'analytics'
-import { ReactComponent as CoinbaseAppLogo } from 'assets/wallets/coinbase-icon.svg'
+import { ReactComponent as AppLogo } from 'assets/wallets/metamask-icon.svg'
 import { AboutFooter } from 'components/About/AboutFooter'
 import Card, { CardType } from 'components/About/Card'
 import { MAIN_CARDS, MORE_CARDS } from 'components/About/constants'
@@ -413,13 +413,13 @@ export default function Landing() {
           >
             {isAndroidGALaunched ? (
               <>
-                <CoinbaseAppLogo width="20" height="20" />
-                Download the Coinbase Wallet
+                <AppLogo width="20" height="20" />
+                Download the Metamask Wallet
               </>
             ) : (
               <>
                 <AppleLogo width="20" height="20" />
-                Download the Coinbase Wallet for iOS
+                Download the Metamask Wallet for iOS
               </>
             )}
           </DownloadWalletLink>
