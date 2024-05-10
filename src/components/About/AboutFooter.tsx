@@ -133,8 +133,8 @@ const LogoSectionContent = () => {
         </SocialLink>
       </SocialLinks>
       <Copyright>
-        Made with 💚 for the Original Ethereum Vision
-        <br />© {new Date().getFullYear()} Ethereum Classic DAO
+        Made with 💚 by
+        <br />© {new Date().getFullYear()} EthereumClassic.com
       </Copyright>
     </>
   )
