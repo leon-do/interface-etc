@@ -159,7 +159,6 @@ export const AboutFooter = () => {
         <LinkGroup>
           <LinkGroupTitle>Protocol</LinkGroupTitle>
           <ExternalTextLink href="#">Community</ExternalTextLink>
-          <ExternalTextLink href="#">Governance</ExternalTextLink>
           <ExternalTextLink href="#">Developers</ExternalTextLink>
         </LinkGroup>
         <LinkGroup>
