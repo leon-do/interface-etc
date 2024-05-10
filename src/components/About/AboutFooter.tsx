@@ -133,8 +133,11 @@ const LogoSectionContent = () => {
         </SocialLink>
       </SocialLinks>
       <Copyright>
-        Made with 💚 for the Original Ethereum Vision
-        <br />© {new Date().getFullYear()} Ethereum Classic DAO
+        Made with 💚 by<br />
+        EthereumClassic.com<br />
+        White B0x Inc.<br />
+        All Rights Reserved.<br />
+        © {new Date().getFullYear()}
       </Copyright>
     </>
   )
@@ -153,50 +156,52 @@ export const AboutFooter = () => {
           <LinkGroupTitle>App</LinkGroupTitle>
           <TextLink to="/swap">Swap</TextLink>
           <TextLink to="/pools">Pools</TextLink>
-          <TextLink to="/tokens">Tokens</TextLink>
+          {/* <TextLink to="/tokens">Tokens</TextLink> */}
           {!shouldDisableNFTRoutes && <TextLink to="/nfts">NFTs</TextLink>}
         </LinkGroup>
         <LinkGroup>
           <LinkGroupTitle>Protocol</LinkGroupTitle>
-          <ExternalTextLink href="#">Community</ExternalTextLink>
-          <ExternalTextLink href="#">Governance</ExternalTextLink>
-          <ExternalTextLink href="#">Developers</ExternalTextLink>
-          <ExternalTextLink href="#">Chameleon</ExternalTextLink>
+          <ExternalTextLink href="https://classicusd.com">USC Stablecoin</ExternalTextLink>
+          <ExternalTextLink href="https://twitter.com/EthClassicDAO">X / Twitter</ExternalTextLink>
+          <ExternalTextLink href="https://discord.gg/2x6Dau6Bur">Discord</ExternalTextLink>
+          <ExternalTextLink href="https://docs.etcswap.org">Documentation</ExternalTextLink>
         </LinkGroup>
         <LinkGroup>
-          <LinkGroupTitle>Company</LinkGroupTitle>
+          <LinkGroupTitle>Ethereum Classic</LinkGroupTitle>
           <TraceEvent
             events={[BrowserEvent.onClick]}
             name={SharedEventName.ELEMENT_CLICKED}
             element={InterfaceElementName.CAREERS_LINK}
-          >
-            <ExternalTextLink href="#">Careers</ExternalTextLink>
-          </TraceEvent>
+          ></TraceEvent>
           <TraceEvent
             events={[BrowserEvent.onClick]}
             name={SharedEventName.ELEMENT_CLICKED}
             element={InterfaceElementName.BLOG_LINK}
           >
-            <ExternalTextLink href="#">Blog</ExternalTextLink>
+            <ExternalTextLink href="https://ethereumclassic.org/news">News</ExternalTextLink>
+            <ExternalTextLink href="https://ethereumclassic.org/faqs">FAQs</ExternalTextLink>
+            <ExternalTextLink href="https://ethereumclassic.org/why-classic">Why Classic?</ExternalTextLink>
+            <ExternalTextLink href="https://ethereumclassic.org/knowledge">Knowledge</ExternalTextLink>
+            <ExternalTextLink href="https://ethereumclassic.org/videos">Videos</ExternalTextLink>
           </TraceEvent>
         </LinkGroup>
         <LinkGroup>
-          <LinkGroupTitle>Get Help</LinkGroupTitle>
+          <LinkGroupTitle>Network</LinkGroupTitle>
           <TraceEvent
             events={[BrowserEvent.onClick]}
             name={SharedEventName.ELEMENT_CLICKED}
-            element={InterfaceElementName.SUPPORT_LINK}
-          >
-            <ExternalTextLink href="#" target="_blank" rel="noopener noreferrer">
-              Contact Us
-            </ExternalTextLink>
-          </TraceEvent>
+            element={InterfaceElementName.CAREERS_LINK}
+          ></TraceEvent>
           <TraceEvent
             events={[BrowserEvent.onClick]}
             name={SharedEventName.ELEMENT_CLICKED}
-            element={InterfaceElementName.SUPPORT_LINK}
+            element={InterfaceElementName.BLOG_LINK}
           >
-            <ExternalTextLink href="#">Help Center</ExternalTextLink>
+            <ExternalTextLink href="https://ethereumclassic.org/services">Services</ExternalTextLink>
+            <ExternalTextLink href="https://ethereumclassic.org/community">ETC Community</ExternalTextLink>
+            <ExternalTextLink href="https://ethereumclassic.org/network">Network Tools</ExternalTextLink>
+            <ExternalTextLink href="https://ethereumclassic.org/mining">Mining</ExternalTextLink>
+            <ExternalTextLink href="https://ethereumclassic.org/development">Developers</ExternalTextLink>
           </TraceEvent>
         </LinkGroup>
       </FooterLinks>
