@@ -140,7 +140,7 @@ export default function SwapBuyFiatButton() {
               cursor: 'pointer',
             }}
           >
-            <Trans>Buy</Trans>
+            <Trans>Buy USC</Trans>
           </ExternalLink>
         </StyledTextButton>
       </TraceEvent>
