@@ -324,7 +324,7 @@ export default function AuthenticatedHeader({ account, openSettings }: { account
                   ) : (
                     <CreditCard height="20px" width="20px" />
                   )}{' '}
-                  <Trans>Buy crypto</Trans>
+                  <Trans>Buy USC</Trans>
                 </>
               )}
             </HeaderButton>
