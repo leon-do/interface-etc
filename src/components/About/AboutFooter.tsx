@@ -153,7 +153,7 @@ export const AboutFooter = () => {
           <LinkGroupTitle>App</LinkGroupTitle>
           <TextLink to="/swap">Swap</TextLink>
           <TextLink to="/pools">Pools</TextLink>
-          <TextLink to="/tokens">Tokens</TextLink>
+          {/* <TextLink to="/tokens">Tokens</TextLink> */}
           {!shouldDisableNFTRoutes && <TextLink to="/nfts">NFTs</TextLink>}
         </LinkGroup>
         <LinkGroup>
