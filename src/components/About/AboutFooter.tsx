@@ -158,11 +158,11 @@ export const AboutFooter = () => {
         </LinkGroup>
         <LinkGroup>
           <LinkGroupTitle>Protocol</LinkGroupTitle>
-          <ExternalTextLink href="https://ethereumclassic.org/discord">Community</ExternalTextLink>
-          <ExternalTextLink href="https://docs.etcswap.org/">Developers</ExternalTextLink>
+          <ExternalTextLink href="https://ethereumclassic.org/community">Community</ExternalTextLink>
+          <ExternalTextLink href="https://ethereumclassic.org/development">Developers</ExternalTextLink>
         </LinkGroup>
         <LinkGroup>
-          <LinkGroupTitle>ETC Network</LinkGroupTitle>
+          <LinkGroupTitle>Learn</LinkGroupTitle>
           <TraceEvent
             events={[BrowserEvent.onClick]}
             name={SharedEventName.ELEMENT_CLICKED}
@@ -178,6 +178,24 @@ export const AboutFooter = () => {
             <ExternalTextLink href="https://ethereumclassic.org/why-classic">Why Classic?</ExternalTextLink>
             <ExternalTextLink href="https://ethereumclassic.org/knowledge">Knowledge</ExternalTextLink>
             <ExternalTextLink href="https://ethereumclassic.org/videos">Videos</ExternalTextLink>
+          </TraceEvent>
+        </LinkGroup>
+        <LinkGroup>
+          <LinkGroupTitle>ETC Network</LinkGroupTitle>
+          <TraceEvent
+            events={[BrowserEvent.onClick]}
+            name={SharedEventName.ELEMENT_CLICKED}
+            element={InterfaceElementName.CAREERS_LINK}
+          ></TraceEvent>
+          <TraceEvent
+            events={[BrowserEvent.onClick]}
+            name={SharedEventName.ELEMENT_CLICKED}
+            element={InterfaceElementName.BLOG_LINK}
+          >
+            <ExternalTextLink href="https://ethereumclassic.org/services">Services</ExternalTextLink>
+            <ExternalTextLink href="https://ethereumclassic.org/network">Network Tools</ExternalTextLink>
+            <ExternalTextLink href="https://ethereumclassic.org/mining">Mining</ExternalTextLink>
+            <ExternalTextLink href="https://ethereumclassic.org/development">Developers</ExternalTextLink>
           </TraceEvent>
         </LinkGroup>
       </FooterLinks>
