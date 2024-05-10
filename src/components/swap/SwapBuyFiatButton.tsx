@@ -128,8 +128,20 @@ export default function SwapBuyFiatButton() {
         element={InterfaceElementName.FIAT_ON_RAMP_BUY_BUTTON}
         properties={{ account_connected: !!account }}
       >
-        <StyledTextButton onClick={handleBuyCrypto} disabled={buyCryptoButtonDisabled} data-testid="buy-fiat-button">
-          <Trans>Buy</Trans>
+        <StyledTextButton
+          // onClick={handleBuyCryptohandleBuyCrypto}
+          disabled={buyCryptoButtonDisabled}
+          data-testid="buy-fiat-button"
+        >
+          <ExternalLink
+            href="https://classicusd.com/"
+            style={{
+              color: 'inherit',
+              cursor: 'pointer',
+            }}
+          >
+            <Trans>Buy</Trans>
+          </ExternalLink>
         </StyledTextButton>
       </TraceEvent>
     </MouseoverTooltip>
