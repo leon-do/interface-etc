@@ -161,7 +161,6 @@ export const AboutFooter = () => {
           <ExternalTextLink href="#">Community</ExternalTextLink>
           <ExternalTextLink href="#">Governance</ExternalTextLink>
           <ExternalTextLink href="#">Developers</ExternalTextLink>
-          <ExternalTextLink href="#">Chameleon</ExternalTextLink>
         </LinkGroup>
         <LinkGroup>
           <LinkGroupTitle>Company</LinkGroupTitle>
