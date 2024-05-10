@@ -77,7 +77,7 @@ export default function CTACards() {
           </ThemedText.DeprecatedBody>
         </ResponsiveColumn>
       </CTA>
-      <CTA data-testid="cta-infolink" href={infoLink + 'pools'}>
+      {/* <CTA data-testid="cta-infolink" href={infoLink + 'pools'}>
         <ResponsiveColumn>
           <HeaderText style={{ alignSelf: 'flex-start' }}>
             <Trans>Top pools</Trans> ↗
@@ -86,7 +86,7 @@ export default function CTACards() {
             <Trans>Explore ETCswap Analytics.</Trans>
           </ThemedText.DeprecatedBody>
         </ResponsiveColumn>
-      </CTA>
+      </CTA> */}
     </CTASection>
   )
 }
