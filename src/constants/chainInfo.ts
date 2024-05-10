@@ -104,7 +104,7 @@ const CHAIN_INFO: ChainInfoMap = {
   [ChainId.CLASSIC]: {
     networkType: NetworkType.L1,
     blockWaitMsBeforeWarning: ms(`10m`),
-    bridge: 'https://bridge.ethereumclassic.com',
+    // bridge: 'https://bridge.ethereumclassic.com',
     docs: 'https://ethereumclassic.org/faqs',
     explorer: 'https://etc.blockscout.com/',
     infoLink: 'https://info.etcswap.org/#/',
@@ -117,7 +117,7 @@ const CHAIN_INFO: ChainInfoMap = {
   [ChainId.CLASSIC_MORDOR]: {
     networkType: NetworkType.L1,
     blockWaitMsBeforeWarning: ms(`10m`),
-    bridge: 'https://bridge.ethereumclassic.com',
+    // bridge: 'https://bridge.ethereumclassic.com',
     docs: 'https://ethereumclassic.org/faqs',
     explorer: 'https://etc-mordor.blockscout.com/',
     infoLink: 'https://info.etcswap.org/#/',
