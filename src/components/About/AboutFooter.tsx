@@ -158,11 +158,12 @@ export const AboutFooter = () => {
         </LinkGroup>
         <LinkGroup>
           <LinkGroupTitle>Protocol</LinkGroupTitle>
-          <ExternalTextLink href="https://ethereumclassic.org/community">Community</ExternalTextLink>
-          <ExternalTextLink href="https://ethereumclassic.org/development">Developers</ExternalTextLink>
+          <ExternalTextLink href="https://twitter.com/EthClassicDAO">X / Twitter</ExternalTextLink>
+          <ExternalTextLink href="https://discord.gg/2x6Dau6Bur">Discord</ExternalTextLink>
+          <ExternalTextLink href="https://docs.etcswap.org">Documentation</ExternalTextLink>
         </LinkGroup>
         <LinkGroup>
-          <LinkGroupTitle>Learn</LinkGroupTitle>
+          <LinkGroupTitle>Learn About ETC</LinkGroupTitle>
           <TraceEvent
             events={[BrowserEvent.onClick]}
             name={SharedEventName.ELEMENT_CLICKED}
@@ -193,6 +194,7 @@ export const AboutFooter = () => {
             element={InterfaceElementName.BLOG_LINK}
           >
             <ExternalTextLink href="https://ethereumclassic.org/services">Services</ExternalTextLink>
+            <ExternalTextLink href="https://ethereumclassic.org/community">ETC Community</ExternalTextLink>
             <ExternalTextLink href="https://ethereumclassic.org/network">Network Tools</ExternalTextLink>
             <ExternalTextLink href="https://ethereumclassic.org/mining">Mining</ExternalTextLink>
             <ExternalTextLink href="https://ethereumclassic.org/development">Developers</ExternalTextLink>
