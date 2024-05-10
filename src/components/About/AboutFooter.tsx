@@ -182,11 +182,7 @@ export const AboutFooter = () => {
             events={[BrowserEvent.onClick]}
             name={SharedEventName.ELEMENT_CLICKED}
             element={InterfaceElementName.SUPPORT_LINK}
-          >
-            <ExternalTextLink href="#" target="_blank" rel="noopener noreferrer">
-              Contact Us
-            </ExternalTextLink>
-          </TraceEvent>
+          ></TraceEvent>
           <TraceEvent
             events={[BrowserEvent.onClick]}
             name={SharedEventName.ELEMENT_CLICKED}
