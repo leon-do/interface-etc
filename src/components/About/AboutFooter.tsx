@@ -164,7 +164,7 @@ export const AboutFooter = () => {
           <ExternalTextLink href="https://docs.etcswap.org">Documentation</ExternalTextLink>
         </LinkGroup>
         <LinkGroup>
-          <LinkGroupTitle>Learn About ETC</LinkGroupTitle>
+          <LinkGroupTitle>Ethereum Classic</LinkGroupTitle>
           <TraceEvent
             events={[BrowserEvent.onClick]}
             name={SharedEventName.ELEMENT_CLICKED}
@@ -183,7 +183,7 @@ export const AboutFooter = () => {
           </TraceEvent>
         </LinkGroup>
         <LinkGroup>
-          <LinkGroupTitle>ETC Network</LinkGroupTitle>
+          <LinkGroupTitle>Network</LinkGroupTitle>
           <TraceEvent
             events={[BrowserEvent.onClick]}
             name={SharedEventName.ELEMENT_CLICKED}
