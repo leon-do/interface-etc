@@ -9,7 +9,6 @@ import { useOnClickOutside } from 'hooks/useOnClickOutside'
 import { Box } from 'nft/components/Box'
 import { Column, Row } from 'nft/components/Flex'
 import {
-  BarChartIcon,
   DiscordIconMenu,
   EllipsisIcon,
   GithubIconMenu,
@@ -155,24 +154,14 @@ export const MenuDropdown = () => {
                     </PrimaryMenuRow.Text>
                   </PrimaryMenuRow>
                 </Box>
-                {
-                  //   <PrimaryMenuRow to="/vote" close={toggleOpen}>
-                  //   <Icon>
-                  //     <GovernanceIcon width={24} height={24} color={theme.neutral1} />
-                  //   </Icon>
-                  //   <PrimaryMenuRow.Text>
-                  //     <Trans>Vote with ECO</Trans>
-                  //   </PrimaryMenuRow.Text>
-                  // </PrimaryMenuRow>
-                }
-                <PrimaryMenuRow href="https://info.etcswap.org/#/">
+                {/* <PrimaryMenuRow href="https://info.etcswap.org/#/">
                   <Icon>
                     <BarChartIcon width={24} height={24} color={theme.neutral1} />
                   </Icon>
                   <PrimaryMenuRow.Text>
                     <Trans>View more analytics</Trans>
                   </PrimaryMenuRow.Text>
-                </PrimaryMenuRow>
+                </PrimaryMenuRow> */}
                 <Box
                   onClick={() =>
                     openDownloadApp({
