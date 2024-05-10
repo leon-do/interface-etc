@@ -162,7 +162,7 @@ export const AboutFooter = () => {
           <ExternalTextLink href="https://docs.etcswap.org/">Developers</ExternalTextLink>
         </LinkGroup>
         <LinkGroup>
-          <LinkGroupTitle>Network</LinkGroupTitle>
+          <LinkGroupTitle>ETC Network</LinkGroupTitle>
           <TraceEvent
             events={[BrowserEvent.onClick]}
             name={SharedEventName.ELEMENT_CLICKED}
@@ -173,7 +173,11 @@ export const AboutFooter = () => {
             name={SharedEventName.ELEMENT_CLICKED}
             element={InterfaceElementName.BLOG_LINK}
           >
-            <ExternalTextLink href="https://ethereumclassic.org/news">Blog</ExternalTextLink>
+            <ExternalTextLink href="https://ethereumclassic.org/news">News</ExternalTextLink>
+            <ExternalTextLink href="https://ethereumclassic.org/faqs">FAQs</ExternalTextLink>
+            <ExternalTextLink href="https://ethereumclassic.org/why-classic">Why Classic?</ExternalTextLink>
+            <ExternalTextLink href="https://ethereumclassic.org/knowledge">Knowledge</ExternalTextLink>
+            <ExternalTextLink href="https://ethereumclassic.org/videos">Videos</ExternalTextLink>
           </TraceEvent>
         </LinkGroup>
       </FooterLinks>
