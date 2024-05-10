@@ -307,26 +307,28 @@ export default function AuthenticatedHeader({ account, openSettings }: { account
           </HeaderButton>
         )}
         {shouldShowBuyFiatButton && (
-          <HeaderButton
-            size={ButtonSize.medium}
-            emphasis={ButtonEmphasis.highSoft}
-            onClick={handleBuyCryptoClick}
-            disabled={disableBuyCryptoButton}
-            data-testid="wallet-buy-crypto"
-          >
-            {error ? (
-              <ThemedText.BodyPrimary>{error}</ThemedText.BodyPrimary>
-            ) : (
-              <>
-                {fiatOnrampAvailabilityLoading ? (
-                  <StyledLoadingButtonSpinner />
-                ) : (
-                  <CreditCard height="20px" width="20px" />
-                )}{' '}
-                <Trans>Buy crypto</Trans>
-              </>
-            )}
-          </HeaderButton>
+          <ExternalLink href="https://classicusd.com">
+            <HeaderButton
+              size={ButtonSize.medium}
+              emphasis={ButtonEmphasis.highSoft}
+              // onClick={handleBuyCryptoClick}
+              disabled={disableBuyCryptoButton}
+              data-testid="wallet-buy-crypto"
+            >
+              {error ? (
+                <ThemedText.BodyPrimary>{error}</ThemedText.BodyPrimary>
+              ) : (
+                <>
+                  {fiatOnrampAvailabilityLoading ? (
+                    <StyledLoadingButtonSpinner />
+                  ) : (
+                    <CreditCard height="20px" width="20px" />
+                  )}{' '}
+                  <Trans>Buy crypto</Trans>
+                </>
+              )}
+            </HeaderButton>
+          </ExternalLink>
         )}
         {Boolean(!fiatOnrampAvailable && fiatOnrampAvailabilityChecked) && (
           <FiatOnrampNotAvailableText marginTop="8px">
