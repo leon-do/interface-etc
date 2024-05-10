@@ -8,14 +8,7 @@ import { useAndroidGALaunchFlagEnabled } from 'featureFlags/flags/androidGALaunc
 import { useOnClickOutside } from 'hooks/useOnClickOutside'
 import { Box } from 'nft/components/Box'
 import { Column, Row } from 'nft/components/Flex'
-import {
-  DiscordIconMenu,
-  EllipsisIcon,
-  GithubIconMenu,
-  // GovernanceIcon,
-  PoolIcon,
-  TwitterIconMenu,
-} from 'nft/components/icons'
+import { DiscordIconMenu, EllipsisIcon, GithubIconMenu, TwitterIconMenu } from 'nft/components/icons'
 import { body, bodySmall } from 'nft/css/common.css'
 import { themeVars } from 'nft/css/sprinkles.css'
 import { ReactNode, useReducer, useRef } from 'react'
@@ -144,6 +137,7 @@ export const MenuDropdown = () => {
           <NavDropdown top={{ sm: 'unset', lg: '56' }} bottom={{ sm: '50', lg: 'unset' }} right="0">
             <Column gap="8">
               <Column paddingX="8" gap="4">
+                {/*
                 <Box display={{ sm: 'none', lg: 'flex', xxl: 'none' }}>
                   <PrimaryMenuRow to="/nfts" close={toggleOpen}>
                     <Icon>
@@ -154,7 +148,7 @@ export const MenuDropdown = () => {
                     </PrimaryMenuRow.Text>
                   </PrimaryMenuRow>
                 </Box>
-                {/* <PrimaryMenuRow href="https://info.etcswap.org/#/">
+                 <PrimaryMenuRow href="https://info.etcswap.org/#/">
                   <Icon>
                     <BarChartIcon width={24} height={24} color={theme.neutral1} />
                   </Icon>
