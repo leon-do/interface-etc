@@ -114,7 +114,9 @@ export function useCurrencyFromMap(
   currencyId?: string | null
 ): Currency | undefined {
   const nativeCurrency = useNativeCurrency(chainId)
-  const isNative = Boolean(nativeCurrency && currencyId?.toUpperCase() === 'ETH')
+  const isNative = Boolean(
+    nativeCurrency && (currencyId?.toUpperCase() === 'ETH' || currencyId?.toUpperCase() === 'ETC')
+  )
   const shorthandMatchAddress = useMemo(() => {
     const chain = asSupportedChain(chainId)
     return chain && currencyId ? TOKEN_SHORTHANDS[currencyId.toUpperCase()]?.[chain] : undefined

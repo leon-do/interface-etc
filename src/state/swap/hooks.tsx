@@ -247,6 +247,7 @@ function parseCurrencyFromURLParameter(urlParam: ParsedQs[string]): string {
     if (valid) return valid
     const upper = urlParam.toUpperCase()
     if (upper === 'ETH') return 'ETH'
+    if (upper === 'ETC') return 'ETC'
     if (upper in TOKEN_SHORTHANDS) return upper
   }
   return ''
