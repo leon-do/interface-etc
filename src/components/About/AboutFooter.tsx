@@ -158,7 +158,7 @@ export const AboutFooter = () => {
         </LinkGroup>
         <LinkGroup>
           <LinkGroupTitle>Protocol</LinkGroupTitle>
-          <ExternalTextLink href="#">Community</ExternalTextLink>
+          <ExternalTextLink href="https://ethereumclassic.org/discord">Community</ExternalTextLink>
           <ExternalTextLink href="#">Developers</ExternalTextLink>
         </LinkGroup>
         <LinkGroup>
