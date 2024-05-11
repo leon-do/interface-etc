@@ -32,7 +32,7 @@ import TokenSafetyModal from 'components/TokenSafety/TokenSafetyModal'
 import { useConnectionReady } from 'connection/eagerlyConnect'
 import { getChainInfo } from 'constants/chainInfo'
 import { asSupportedChain, isSupportedChain } from 'constants/chains'
-import { getSwapCurrencyId, TOKEN_SHORTHANDS } from 'constants/tokens'
+import { getSwapCurrencyId, TOKEN_SHORTHANDS, USC_CLASSIC } from 'constants/tokens'
 import { useUniswapXDefaultEnabled } from 'featureFlags/flags/uniswapXDefault'
 import { useCurrency, useDefaultActiveTokens } from 'hooks/Tokens'
 import { useIsSwapUnsupported } from 'hooks/useIsSwapUnsupported'
@@ -148,7 +148,7 @@ export default function SwapPage({ className }: { className?: string }) {
   const location = useLocation()
 
   const supportedChainId = asSupportedChain(connectedChainId)
-
+  const uscAddress = connectedChainId === ChainId.CLASSIC ? USC_CLASSIC.address : undefined
   return (
     <Trace page={InterfacePageName.SWAP_PAGE} shouldLogImpression>
       <PageWrapper>
@@ -156,7 +156,7 @@ export default function SwapPage({ className }: { className?: string }) {
           className={className}
           chainId={supportedChainId ?? ChainId.MAINNET}
           initialInputCurrencyId={loadedUrlParams?.[Field.INPUT]?.currencyId}
-          initialOutputCurrencyId={loadedUrlParams?.[Field.OUTPUT]?.currencyId}
+          initialOutputCurrencyId={loadedUrlParams?.[Field.OUTPUT]?.currencyId || uscAddress}
           disableTokenInputs={supportedChainId === undefined}
         />
         <NetworkAlert />
