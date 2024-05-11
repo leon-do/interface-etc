@@ -40,13 +40,14 @@ const StyledCardLogo = styled.img`
 
 export const MORE_CARDS = [
   {
-    to: 'https://gateway.ethereumclassic.com',
+    to: 'https://classicusd.com',
     external: true,
-    title: 'Buy crypto',
-    description: 'Buy crypto with your credit card or bank account at the best rates.',
+    title: 'Buy USC',
+    description:
+      'Classic USD (USC) is the first regulated, full reserve stablecoin issued natively on Ethereum Classic.',
     lightIcon: <DollarSign color={lightTheme.neutral3} size={48} />,
     darkIcon: <StyledCardLogo src={darkDollarImgSrc} alt="Earn" />,
-    cta: 'Buy ETC now',
+    cta: 'Buy USC now',
     elementName: InterfaceElementName.ABOUT_PAGE_BUY_CRYPTO_CARD,
   },
   {
@@ -55,14 +56,14 @@ export const MORE_CARDS = [
     description: 'Provide liquidity to pools on ETCswap and earn from protocol fees on swaps.',
     lightIcon: <StyledCardLogo src={lightArrowImgSrc} alt="Analytics" />,
     darkIcon: <StyledCardLogo src={darkArrowImgSrc} alt="Analytics" />,
-    cta: 'Provide liquidity to ETCswap',
+    cta: 'Add liquidity',
     elementName: InterfaceElementName.ABOUT_PAGE_EARN_CARD,
   },
   {
     to: 'https://ethereumclassic.org',
     external: true,
     title: 'Build dApps',
-    description: 'Build apps and tools on the most secure DeFi protocol stack in the world.',
+    description: 'Build apps and tools on the most secure DeFi protocol stack.',
     lightIcon: <Terminal color={lightTheme.neutral3} size={48} />,
     darkIcon: <StyledCardLogo src={darkTerminalImgSrc} alt="Developers" />,
     cta: 'Build on Ethereum Classic',
