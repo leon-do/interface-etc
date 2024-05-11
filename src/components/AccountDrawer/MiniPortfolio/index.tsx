@@ -16,7 +16,6 @@ import { usePendingActivity } from './Activity/hooks'
 import NFTs from './NFTs'
 import Pools from './Pools'
 import { PortfolioRowWrapper } from './PortfolioRow'
-import Tokens from './Tokens'
 
 const Wrapper = styled(Column)`
   margin-top: 28px;
@@ -69,11 +68,17 @@ interface Page {
 }
 
 const Pages: Array<Page> = [
+  // {
+  //   title: <Trans>Tokens</Trans>,
+  //   key: 'tokens',
+  //   component: Tokens,
+  //   loggingElementName: InterfaceElementName.MINI_PORTFOLIO_TOKENS_TAB,
+  // },
   {
-    title: <Trans>Tokens</Trans>,
-    key: 'tokens',
-    component: Tokens,
-    loggingElementName: InterfaceElementName.MINI_PORTFOLIO_TOKENS_TAB,
+    title: <Trans>Activity</Trans>,
+    key: 'activity',
+    component: ActivityTab,
+    loggingElementName: InterfaceElementName.MINI_PORTFOLIO_ACTIVITY_TAB,
   },
   {
     title: <Trans>NFTs</Trans>,
@@ -86,12 +91,6 @@ const Pages: Array<Page> = [
     key: 'pools',
     component: Pools,
     loggingElementName: InterfaceElementName.MINI_PORTFOLIO_POOLS_TAB,
-  },
-  {
-    title: <Trans>Activity</Trans>,
-    key: 'activity',
-    component: ActivityTab,
-    loggingElementName: InterfaceElementName.MINI_PORTFOLIO_ACTIVITY_TAB,
   },
 ]
 
