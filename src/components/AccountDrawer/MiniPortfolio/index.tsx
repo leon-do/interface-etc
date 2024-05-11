@@ -16,6 +16,7 @@ import { usePendingActivity } from './Activity/hooks'
 import NFTs from './NFTs'
 import Pools from './Pools'
 import { PortfolioRowWrapper } from './PortfolioRow'
+// import Tokens from './Tokens'
 
 const Wrapper = styled(Column)`
   margin-top: 28px;
