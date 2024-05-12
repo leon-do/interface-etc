@@ -8,6 +8,15 @@ export const NATIVE_CHAIN_ID = 'NATIVE'
 // https://docs.openzeppelin.com/contracts/3.x/erc20
 export const DEFAULT_ERC20_DECIMALS = 18
 
+// Ethereum Classic Token
+export const USC_CLASSIC = new Token(
+  ChainId.CLASSIC,
+  '0xDE093684c796204224BC081f937aa059D903c52a', // USC address
+  6,
+  'USC',
+  'USC'
+)
+
 export const USDC_MAINNET = new Token(
   ChainId.MAINNET,
   '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48',
