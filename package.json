@@ -1,5 +1,6 @@
 {
   "name": "@uniswap/interface",
+  "homepage": ".",
   "version": "1.1.0",
   "description": "ETCswap Interface",
   "license": "GPL-3.0-or-later",
