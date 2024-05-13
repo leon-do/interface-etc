@@ -8,7 +8,7 @@ import lightArrowImgSrc from './images/aboutArrowLight.png'
 import darkDollarImgSrc from './images/aboutDollarDark.png'
 import darkTerminalImgSrc from './images/aboutTerminalDark.png'
 import nftCardImgSrc from './images/nftCard.png'
-import swapCardImgSrc from './images/swapCard.png'
+// import swapCardImgSrc from './images/swapCard.png'
 
 export const MAIN_CARDS = [
   {
@@ -16,8 +16,8 @@ export const MAIN_CARDS = [
     title: 'Swap Digital Assets',
     description: 'Buy, sell, and explore tokens on Ethereum Classic and other EVM compatible layer 1 & 2 chains.',
     cta: 'Trade Digital Assets',
-    darkBackgroundImgSrc: swapCardImgSrc,
-    lightBackgroundImgSrc: swapCardImgSrc,
+    // darkBackgroundImgSrc: swapCardImgSrc,
+    // lightBackgroundImgSrc: swapCardImgSrc,
     elementName: InterfaceElementName.ABOUT_PAGE_SWAP_CARD,
   },
   {
@@ -62,7 +62,7 @@ export const MORE_CARDS = [
     to: 'https://ethereumclassic.org',
     external: true,
     title: 'Build dApps',
-    description: 'Build apps and tools on the most secure DeFi protocol stack in the world.',
+    description: 'Build apps and tools on the most secure DeFi protocol stack.',
     lightIcon: <Terminal color={lightTheme.neutral3} size={48} />,
     darkIcon: <StyledCardLogo src={darkTerminalImgSrc} alt="Developers" />,
     cta: 'Build on Ethereum Classic',
