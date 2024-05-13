@@ -43,8 +43,7 @@ export const MORE_CARDS = [
     to: 'https://classicusd.com',
     external: true,
     title: 'Buy USC',
-    description:
-      'USC is the first regulated, full reserve stablecoin issued natively on Ethereum Classic.',
+    description: 'USC is the first regulated, full reserve stablecoin issued natively on Ethereum Classic.',
     lightIcon: <DollarSign color={lightTheme.neutral3} size={48} />,
     darkIcon: <StyledCardLogo src={darkDollarImgSrc} alt="Earn" />,
     cta: 'Buy USC Now',
