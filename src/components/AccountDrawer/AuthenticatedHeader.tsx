@@ -230,7 +230,7 @@ export default function AuthenticatedHeader({ account, openSettings }: { account
     ]).then(([etc, tokens]) => {
       const etcBalance = ((etc.coin_balance || 0) * (etc.exchange_rate || 0)) / 10 ** 18
       const uscToken = tokens.filter((tokens: any) => tokens.token?.address === USC_CLASSIC.address)
-      const uscBalance = uscToken[0]?.value || 0
+      const uscBalance = uscToken[0]?.value / 10 ** 6 || 0
       const wetcToken = tokens.filter((tokens: any) => tokens.token?.address === WETH_ADDRESS(61))
       const wetcBalance = ((wetcToken[0]?.value || 0) * (etc.exchange_rate || 0)) / 10 ** 18
       setEtcBalance(Number(etcBalance) + Number(uscBalance) + Number(wetcBalance))
