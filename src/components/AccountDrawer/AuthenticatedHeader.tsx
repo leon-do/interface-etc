@@ -1,23 +1,25 @@
 import { Trans } from '@lingui/macro'
 import { BrowserEvent, InterfaceElementName, InterfaceEventName, SharedEventName } from '@uniswap/analytics-events'
 import { CurrencyAmount, Token } from '@uniswap/sdk-core'
+import { WETH_ADDRESS } from '@uniswap/universal-router-sdk'
 import { useWeb3React } from '@web3-react/core'
 import { sendAnalyticsEvent, TraceEvent } from 'analytics'
 import { ButtonEmphasis, ButtonSize, LoadingButtonSpinner, ThemeButton } from 'components/Button'
 import Column from 'components/Column'
 import { Power } from 'components/Icons/Power'
 import { Settings } from 'components/Icons/Settings'
-import { AutoRow } from 'components/Row'
+// import { AutoRow } from 'components/Row'
 import { LoadingBubble } from 'components/Tokens/loading'
-import { DeltaArrow } from 'components/Tokens/TokenDetails/Delta'
+// import { DeltaArrow } from 'components/Tokens/TokenDetails/Delta'
 import Tooltip from 'components/Tooltip'
 import { getConnection } from 'connection'
+import { USC_CLASSIC } from 'constants/tokens'
 import { useDisableNFTRoutes } from 'hooks/useDisableNFTRoutes'
 import useENSName from 'hooks/useENSName'
 import { useProfilePageState, useSellAsset, useWalletCollections } from 'nft/hooks'
 import { useIsNftClaimAvailable } from 'nft/hooks/useIsNftClaimAvailable'
 import { ProfilePageStateType } from 'nft/types'
-import { useCallback, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import { CreditCard, Info } from 'react-feather'
 import { useNavigate } from 'react-router-dom'
 import { useAppDispatch } from 'state/hooks'
@@ -151,6 +153,7 @@ const PortfolioDrawerContainer = styled(Column)`
 `
 
 export default function AuthenticatedHeader({ account, openSettings }: { account: string; openSettings: () => void }) {
+  const [etcBalance, setEtcBalance] = useState(0)
   const { connector } = useWeb3React()
   const { ENSName } = useENSName(account)
   const dispatch = useAppDispatch()
@@ -204,13 +207,6 @@ export default function AuthenticatedHeader({ account, openSettings }: { account
     loading: fiatOnrampAvailabilityLoading,
   } = useFiatOnrampAvailability(shouldCheck, openFoRModalWithAnalytics)
 
-  const handleBuyCryptoClick = useCallback(() => {
-    if (!fiatOnrampAvailabilityChecked) {
-      setShouldCheck(true)
-    } else if (fiatOnrampAvailable) {
-      openFoRModalWithAnalytics()
-    }
-  }, [fiatOnrampAvailabilityChecked, fiatOnrampAvailable, openFoRModalWithAnalytics])
   const disableBuyCryptoButton = Boolean(
     error || (!fiatOnrampAvailable && fiatOnrampAvailabilityChecked) || fiatOnrampAvailabilityLoading
   )
@@ -221,9 +217,25 @@ export default function AuthenticatedHeader({ account, openSettings }: { account
   const { data: portfolioBalances } = useCachedPortfolioBalancesQuery({ account })
   const portfolio = portfolioBalances?.portfolios?.[0]
   const totalBalance = portfolio?.tokensTotalDenominatedValue?.value
-  const absoluteChange = portfolio?.tokensTotalDenominatedValueChange?.absolute?.value
-  const percentChange = portfolio?.tokensTotalDenominatedValueChange?.percentage?.value
+  // const absoluteChange = portfolio?.tokensTotalDenominatedValueChange?.absolute?.value
+  // const percentChange = portfolio?.tokensTotalDenominatedValueChange?.percentage?.value
   const [showDisconnectConfirm, setShowDisconnectConfirm] = useState(false)
+
+  // get ETC balance
+  useEffect(() => {
+    const etcUrl = `https://etc.blockscout.com/api/v2/addresses`
+    Promise.all([
+      fetch(`${etcUrl}/${account}`).then((response) => response.json()),
+      fetch(`${etcUrl}/${account}/token-balances`).then((response) => response.json()),
+    ]).then(([etc, tokens]) => {
+      const etcBalance = ((etc.coin_balance || 0) * (etc.exchange_rate || 0)) / 10 ** 18
+      const uscToken = tokens.filter((tokens: any) => tokens.token?.address === USC_CLASSIC.address)
+      const uscBalance = uscToken[0]?.value / 10 ** 6 || 0
+      const wetcToken = tokens.filter((tokens: any) => tokens.token?.address === WETH_ADDRESS(61))
+      const wetcBalance = ((wetcToken[0]?.value || 0) * (etc.exchange_rate || 0)) / 10 ** 18
+      setEtcBalance(Number(etcBalance) + Number(uscBalance) + Number(wetcBalance))
+    })
+  })
 
   return (
     <AuthenticatedHeaderWrapper>
@@ -272,11 +284,11 @@ export default function AuthenticatedHeader({ account, openSettings }: { account
           <FadeInColumn gap="xs">
             <ThemedText.HeadlineLarge fontWeight={535} data-testid="portfolio-total-balance">
               {formatNumber({
-                input: totalBalance,
+                input: totalBalance + etcBalance,
                 type: NumberType.PortfolioBalance,
               })}
             </ThemedText.HeadlineLarge>
-            <AutoRow marginBottom="20px">
+            {/* <AutoRow marginBottom="20px">
               {absoluteChange !== 0 && percentChange && (
                 <>
                   <DeltaArrow delta={absoluteChange} />
@@ -288,7 +300,7 @@ export default function AuthenticatedHeader({ account, openSettings }: { account
                   </ThemedText.BodySecondary>
                 </>
               )}
-            </AutoRow>
+            </AutoRow> */}
           </FadeInColumn>
         ) : (
           <Column gap="xs">
