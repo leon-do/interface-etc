@@ -373,13 +373,13 @@ export default function Landing() {
                 <Trans>
                   Buy, sell, and explore digital assets on
                   <br />
-                  the most secure smart contract blockchain in the world
+                  the most secure smart contract blockchain
                 </Trans>
               ) : (
                 <Trans>
                   Buy, sell, and explore digital assets & collectables on
                   <br />
-                  the most secure smart contract blockchain in the world
+                  the most secure smart contract blockchain
                 </Trans>
               )}
             </SubText>
