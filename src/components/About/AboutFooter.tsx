@@ -133,11 +133,14 @@ const LogoSectionContent = () => {
         </SocialLink>
       </SocialLinks>
       <Copyright>
-        Made with 💚 by<br />
-        EthereumClassic.com<br />
-        White B0x Inc.<br />
-        All Rights Reserved.<br />
-        © {new Date().getFullYear()}
+        Made with 💚 by
+        <br />
+        EthereumClassic.com
+        <br />
+        White B0x Inc.
+        <br />
+        All Rights Reserved.
+        <br />© {new Date().getFullYear()}
       </Copyright>
     </>
   )
@@ -156,6 +159,7 @@ export const AboutFooter = () => {
           <LinkGroupTitle>App</LinkGroupTitle>
           <TextLink to="/swap">Swap</TextLink>
           <TextLink to="/pools">Pools</TextLink>
+          <ExternalTextLink href="https://info.etcswap.org">Info</ExternalTextLink>
           {/* <TextLink to="/tokens">Tokens</TextLink> */}
           {!shouldDisableNFTRoutes && <TextLink to="/nfts">NFTs</TextLink>}
         </LinkGroup>
