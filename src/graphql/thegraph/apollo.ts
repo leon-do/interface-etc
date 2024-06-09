@@ -12,6 +12,7 @@ const CHAIN_SUBGRAPH_URL: Record<number, string> = {
   [ChainId.BNB]: 'https://api.thegraph.com/subgraphs/name/ianlapham/uniswap-v3-bsc?source=uniswap',
   [ChainId.AVALANCHE]: 'https://api.thegraph.com/subgraphs/name/lynnshaoyu/uniswap-v3-avax?source=uniswap',
   [ChainId.BASE]: 'https://api.studio.thegraph.com/query/48211/uniswap-v3-base/version/latest',
+  [ChainId.CLASSIC]: 'https://graph.etcswap.org/subgraphs/name/etcswap-v3',
 }
 
 const CHAIN_BLOCK_SUBGRAPH_URL: Record<number, string> = {
