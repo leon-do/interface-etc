@@ -134,13 +134,13 @@ export default function SwapBuyFiatButton() {
           data-testid="buy-fiat-button"
         >
           <ExternalLink
-            href="https://classicusd.com/"
+            href="https://moonpay.com/buy"
             style={{
               color: 'inherit',
               cursor: 'pointer',
             }}
           >
-            <Trans>Buy USC</Trans>
+            <Trans>Buy</Trans>
           </ExternalLink>
         </StyledTextButton>
       </TraceEvent>
